@@ -1,32 +1,203 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StockPilot | Customers</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <header>
-    <h1 class="logo">StockPilot</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="orders.html">Orders</a>
-      <a href="customers.html">Customers</a>
-      <a href="analytics.html">Analytics</a>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StockPilot | Customers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="index.html"
+          ><img
+            src="images/stockpilot-mark.svg"
+            alt=""
+            width="36"
+            height="36"
+          /><span>StockPilot</span></a
+        >
+        <p class="nav-label">WORKSPACE</p>
+        <nav class="side-nav" aria-label="Main navigation">
+          <a class="nav-link" href="index.html"
+            ><span class="nav-icon">▦</span>Dashboard</a
+          >
+          <a class="nav-link" href="products.html"
+            ><span class="nav-icon">▤</span>Products</a
+          >
+          <a class="nav-link" href="orders.html"
+            ><span class="nav-icon">⇄</span>Orders</a
+          >
+          <a class="nav-link active" href="customers.html"
+            ><span class="nav-icon">♙</span>Customers</a
+          >
+          <a class="nav-link" href="analytics.html"
+            ><span class="nav-icon">▥</span>Analytics</a
+          >
+        </nav>
+        <div class="sidebar-note">
+          <span class="note-dot"></span>
+          <div>
+            <strong>Inventory status</strong>
+            <p>Workspace is up to date</p>
+          </div>
+        </div>
+        <div class="sidebar-footer">StockPilot <span>•</span> Week 2</div>
+      </aside>
+      <main class="main-content">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">INVENTORY MANAGEMENT</p>
+            <h1>Customers</h1>
+          </div>
+          <div class="profile">
+            <div class="profile-avatar">SP</div>
+            <div><strong>Store Admin</strong><span>Administrator</span></div>
+          </div>
+        </header>
 
-  <main>
-    <h2>Customers</h2>
-    <p>Keep customer information organized in one place.</p>
-  </main>
+        <section class="page-intro">
+          <div>
+            <h2>Customers</h2>
+            <p>Keep track of the people who shop with you.</p>
+          </div>
+          <span class="period-chip">Customer directory</span>
+        </section>
+        <section class="stats-grid compact-stats">
+          <article class="stat-card">
+            <div class="stat-top">
+              <span>Total customers</span><span class="stat-icon blue">♙</span>
+            </div>
+            <p class="stat-number">1,284</p>
+            <p class="stat-foot">Customer records</p>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top">
+              <span>New this month</span><span class="stat-icon teal">＋</span>
+            </div>
+            <p class="stat-number">86</p>
+            <p class="stat-foot">
+              <span class="positive">New registrations</span>
+            </p>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top">
+              <span>Returning</span><span class="stat-icon amber">↺</span>
+            </div>
+            <p class="stat-number">64%</p>
+            <p class="stat-foot">Repeat customer rate</p>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top">
+              <span>Avg. order value</span
+              ><span class="stat-icon violet">$</span>
+            </div>
+            <p class="stat-number">$96.40</p>
+            <p class="stat-foot">Per completed order</p>
+          </article>
+        </section>
+        <section class="panel table-panel">
+          <div class="panel-heading">
+            <div>
+              <h2>Customer directory</h2>
+              <p>Sample customer details and activity.</p>
+            </div>
+            <span class="period-chip">5 sample customers</span>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Customer</th>
+                  <th>Email</th>
+                  <th>Joined</th>
+                  <th>Orders</th>
+                  <th>Total spent</th>
+                  <th>Type</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="customer-cell">
+                      <span class="customer-avatar avatar-blue">OM</span
+                      ><strong>Olivia Martin</strong>
+                    </div>
+                  </td>
+                  <td>olivia@example.com</td>
+                  <td>May 12, 2026</td>
+                  <td>12</td>
+                  <td class="strong">$1,240.00</td>
+                  <td><span class="status status-violet">VIP</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="customer-cell">
+                      <span class="customer-avatar avatar-teal">NW</span
+                      ><strong>Noah Williams</strong>
+                    </div>
+                  </td>
+                  <td>noah@example.com</td>
+                  <td>Jun 03, 2026</td>
+                  <td>8</td>
+                  <td class="strong">$865.50</td>
+                  <td><span class="status status-green">Returning</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="customer-cell">
+                      <span class="customer-avatar avatar-orange">ED</span
+                      ><strong>Emma Davis</strong>
+                    </div>
+                  </td>
+                  <td>emma@example.com</td>
+                  <td>Aug 21, 2026</td>
+                  <td>3</td>
+                  <td class="strong">$292.00</td>
+                  <td><span class="status status-blue">Regular</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="customer-cell">
+                      <span class="customer-avatar avatar-pink">LB</span
+                      ><strong>Liam Brown</strong>
+                    </div>
+                  </td>
+                  <td>liam@example.com</td>
+                  <td>Apr 17, 2026</td>
+                  <td>15</td>
+                  <td class="strong">$2,118.75</td>
+                  <td><span class="status status-violet">VIP</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="customer-cell">
+                      <span class="customer-avatar avatar-green">AW</span
+                      ><strong>Ava Wilson</strong>
+                    </div>
+                  </td>
+                  <td>ava@example.com</td>
+                  <td>Sep 09, 2026</td>
+                  <td>2</td>
+                  <td class="strong">$226.00</td>
+                  <td><span class="status status-blue">Regular</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
 
-  <footer>
-    <p>&copy; 2026 StockPilot. All rights reserved.</p>
-  </footer>
-  <script src="js/script.js"></script>
-</body>
+        <footer class="page-footer">
+          <span>© 2026 StockPilot Inventory Management</span
+          ><span>Built for smarter stock management.</span>
+        </footer>
+      </main>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
 </html>

@@ -1,32 +1,198 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StockPilot | Analytics</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <header>
-    <h1 class="logo">StockPilot</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="orders.html">Orders</a>
-      <a href="customers.html">Customers</a>
-      <a href="analytics.html">Analytics</a>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StockPilot | Analytics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="index.html"
+          ><img
+            src="images/stockpilot-mark.svg"
+            alt=""
+            width="36"
+            height="36"
+          /><span>StockPilot</span></a
+        >
+        <p class="nav-label">WORKSPACE</p>
+        <nav class="side-nav" aria-label="Main navigation">
+          <a class="nav-link" href="index.html"
+            ><span class="nav-icon">▦</span>Dashboard</a
+          >
+          <a class="nav-link" href="products.html"
+            ><span class="nav-icon">▤</span>Products</a
+          >
+          <a class="nav-link" href="orders.html"
+            ><span class="nav-icon">⇄</span>Orders</a
+          >
+          <a class="nav-link" href="customers.html"
+            ><span class="nav-icon">♙</span>Customers</a
+          >
+          <a class="nav-link active" href="analytics.html"
+            ><span class="nav-icon">▥</span>Analytics</a
+          >
+        </nav>
+        <div class="sidebar-note">
+          <span class="note-dot"></span>
+          <div>
+            <strong>Inventory status</strong>
+            <p>Workspace is up to date</p>
+          </div>
+        </div>
+        <div class="sidebar-footer">StockPilot <span>•</span> Week 2</div>
+      </aside>
+      <main class="main-content">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">INVENTORY MANAGEMENT</p>
+            <h1>Analytics</h1>
+          </div>
+          <div class="profile">
+            <div class="profile-avatar">SP</div>
+            <div><strong>Store Admin</strong><span>Administrator</span></div>
+          </div>
+        </header>
 
-  <main>
-    <h2>Analytics</h2>
-    <p>Review business performance, sales trends, and inventory levels.</p>
-  </main>
+        <section class="page-intro">
+          <div>
+            <h2>Analytics</h2>
+            <p>Understand sales and inventory performance at a glance.</p>
+          </div>
+          <span class="period-chip">October 2026</span>
+        </section>
+        <section class="stats-grid compact-stats">
+          <article class="stat-card">
+            <div class="stat-top">
+              <span>Gross revenue</span><span class="stat-icon blue">$</span>
+            </div>
+            <p class="stat-number">$8,420</p>
+            <p class="stat-foot">
+              <span class="positive">+8.4%</span> vs. last month
+            </p>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top">
+              <span>Orders completed</span><span class="stat-icon teal">✓</span>
+            </div>
+            <p class="stat-number">158</p>
+            <p class="stat-foot">Delivered orders</p>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top">
+              <span>Average order</span><span class="stat-icon amber">↗</span>
+            </div>
+            <p class="stat-number">$96.40</p>
+            <p class="stat-foot">Average sale value</p>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top">
+              <span>Products sold</span><span class="stat-icon violet">▤</span>
+            </div>
+            <p class="stat-number">426</p>
+            <p class="stat-foot">Units this month</p>
+          </article>
+        </section>
+        <section class="content-grid analytics-grid">
+          <article class="panel">
+            <div class="panel-heading">
+              <div>
+                <h2>Revenue overview</h2>
+                <p>Illustrative monthly revenue figures.</p>
+              </div>
+              <span class="period-chip">May – Oct</span>
+            </div>
+            <div
+              class="bar-chart"
+              role="img"
+              aria-label="Illustrative revenue chart from May to October"
+            >
+              <div class="chart-y-labels">
+                <span>$10k</span><span>$7.5k</span><span>$5k</span
+                ><span>$2.5k</span><span>$0</span>
+              </div>
+              <div class="chart-bars">
+                <div class="bar-column">
+                  <div class="bar" style="height: 42%"></div>
+                  <span>May</span>
+                </div>
+                <div class="bar-column">
+                  <div class="bar" style="height: 56%"></div>
+                  <span>Jun</span>
+                </div>
+                <div class="bar-column">
+                  <div class="bar" style="height: 49%"></div>
+                  <span>Jul</span>
+                </div>
+                <div class="bar-column">
+                  <div class="bar" style="height: 70%"></div>
+                  <span>Aug</span>
+                </div>
+                <div class="bar-column">
+                  <div class="bar" style="height: 64%"></div>
+                  <span>Sep</span>
+                </div>
+                <div class="bar-column">
+                  <div class="bar bar-current" style="height: 84%"></div>
+                  <span>Oct</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="panel">
+            <div class="panel-heading">
+              <div>
+                <h2>Top categories</h2>
+                <p>Share of recorded sales.</p>
+              </div>
+            </div>
+            <div class="category-row">
+              <div class="category-title">
+                <span class="category-dot dot-blue"></span
+                ><span>Accessories</span><strong>42%</strong>
+              </div>
+              <div class="category-track"><span style="width: 42%"></span></div>
+            </div>
+            <div class="category-row">
+              <div class="category-title">
+                <span class="category-dot dot-teal"></span><span>Audio</span
+                ><strong>28%</strong>
+              </div>
+              <div class="category-track"><span style="width: 28%"></span></div>
+            </div>
+            <div class="category-row">
+              <div class="category-title">
+                <span class="category-dot dot-purple"></span
+                ><span>Displays</span><strong>18%</strong>
+              </div>
+              <div class="category-track"><span style="width: 18%"></span></div>
+            </div>
+            <div class="category-row">
+              <div class="category-title">
+                <span class="category-dot dot-orange"></span><span>Other</span
+                ><strong>12%</strong>
+              </div>
+              <div class="category-track"><span style="width: 12%"></span></div>
+            </div>
+            <p class="small-note">
+              Figures are sample content for the Week 2 frontend prototype.
+            </p>
+          </article>
+        </section>
 
-  <footer>
-    <p>&copy; 2026 StockPilot. All rights reserved.</p>
-  </footer>
-  <script src="js/script.js"></script>
-</body>
+        <footer class="page-footer">
+          <span>© 2026 StockPilot Inventory Management</span
+          ><span>Built for smarter stock management.</span>
+        </footer>
+      </main>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
 </html>

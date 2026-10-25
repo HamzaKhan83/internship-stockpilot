@@ -1,32 +1,204 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StockPilot | Products</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <header>
-    <h1 class="logo">StockPilot</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="orders.html">Orders</a>
-      <a href="customers.html">Customers</a>
-      <a href="analytics.html">Analytics</a>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StockPilot | Products</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="index.html"
+          ><img
+            src="images/stockpilot-mark.svg"
+            alt=""
+            width="36"
+            height="36"
+          /><span>StockPilot</span></a
+        >
+        <p class="nav-label">WORKSPACE</p>
+        <nav class="side-nav" aria-label="Main navigation">
+          <a class="nav-link" href="index.html"
+            ><span class="nav-icon">▦</span>Dashboard</a
+          >
+          <a class="nav-link active" href="products.html"
+            ><span class="nav-icon">▤</span>Products</a
+          >
+          <a class="nav-link" href="orders.html"
+            ><span class="nav-icon">⇄</span>Orders</a
+          >
+          <a class="nav-link" href="customers.html"
+            ><span class="nav-icon">♙</span>Customers</a
+          >
+          <a class="nav-link" href="analytics.html"
+            ><span class="nav-icon">▥</span>Analytics</a
+          >
+        </nav>
+        <div class="sidebar-note">
+          <span class="note-dot"></span>
+          <div>
+            <strong>Inventory status</strong>
+            <p>Workspace is up to date</p>
+          </div>
+        </div>
+        <div class="sidebar-footer">StockPilot <span>•</span> Week 2</div>
+      </aside>
+      <main class="main-content">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">INVENTORY MANAGEMENT</p>
+            <h1>Products</h1>
+          </div>
+          <div class="profile">
+            <div class="profile-avatar">SP</div>
+            <div><strong>Store Admin</strong><span>Administrator</span></div>
+          </div>
+        </header>
 
-  <main>
-    <h2>Products</h2>
-    <p>Manage your products and monitor available stock.</p>
-  </main>
+        <section class="page-intro">
+          <div>
+            <h2>Products</h2>
+            <p>Manage the items available in your inventory.</p>
+          </div>
+          <a class="button button-primary" href="#product-list"
+            >View inventory ↓</a
+          >
+        </section>
+        <section class="stats-grid compact-stats">
+          <article class="stat-card">
+            <div class="stat-top">
+              <span>All products</span><span class="stat-icon blue">▤</span>
+            </div>
+            <p class="stat-number">248</p>
+            <p class="stat-foot">Across all categories</p>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top">
+              <span>In stock</span><span class="stat-icon teal">✓</span>
+            </div>
+            <p class="stat-number">219</p>
+            <p class="stat-foot">
+              <span class="positive">Available</span> for orders
+            </p>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top">
+              <span>Low stock</span><span class="stat-icon amber">!</span>
+            </div>
+            <p class="stat-number">09</p>
+            <p class="stat-foot"><span class="warning">Reorder soon</span></p>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top">
+              <span>Out of stock</span><span class="stat-icon violet">×</span>
+            </div>
+            <p class="stat-number">20</p>
+            <p class="stat-foot">Review availability</p>
+          </article>
+        </section>
+        <section class="panel table-panel" id="product-list">
+          <div class="panel-heading">
+            <div>
+              <h2>Inventory list</h2>
+              <p>Sample product records for your store.</p>
+            </div>
+            <span class="period-chip">5 sample products</span>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Product</th>
+                  <th>SKU</th>
+                  <th>Category</th>
+                  <th>Price</th>
+                  <th>Stock</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="table-product">
+                      <span class="product-thumb thumb-blue">KB</span
+                      ><strong>Wireless Keyboard</strong>
+                    </div>
+                  </td>
+                  <td>KB-204</td>
+                  <td>Accessories</td>
+                  <td>$45.00</td>
+                  <td>4</td>
+                  <td><span class="status status-amber">Low stock</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="table-product">
+                      <span class="product-thumb thumb-purple">HP</span
+                      ><strong>Headphones Pro</strong>
+                    </div>
+                  </td>
+                  <td>HP-118</td>
+                  <td>Audio</td>
+                  <td>$79.00</td>
+                  <td>6</td>
+                  <td><span class="status status-amber">Low stock</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="table-product">
+                      <span class="product-thumb thumb-orange">MS</span
+                      ><strong>Wireless Mouse</strong>
+                    </div>
+                  </td>
+                  <td>MS-072</td>
+                  <td>Accessories</td>
+                  <td>$25.00</td>
+                  <td>3</td>
+                  <td><span class="status status-red">Critical</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="table-product">
+                      <span class="product-thumb thumb-green">MN</span
+                      ><strong>27-inch Monitor</strong>
+                    </div>
+                  </td>
+                  <td>MN-330</td>
+                  <td>Displays</td>
+                  <td>$229.00</td>
+                  <td>18</td>
+                  <td><span class="status status-green">In stock</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="table-product">
+                      <span class="product-thumb thumb-pink">WC</span
+                      ><strong>USB-C Webcam</strong>
+                    </div>
+                  </td>
+                  <td>WC-091</td>
+                  <td>Accessories</td>
+                  <td>$64.00</td>
+                  <td>24</td>
+                  <td><span class="status status-green">In stock</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
 
-  <footer>
-    <p>&copy; 2026 StockPilot. All rights reserved.</p>
-  </footer>
-  <script src="js/script.js"></script>
-</body>
+        <footer class="page-footer">
+          <span>© 2026 StockPilot Inventory Management</span
+          ><span>Built for smarter stock management.</span>
+        </footer>
+      </main>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
 </html>

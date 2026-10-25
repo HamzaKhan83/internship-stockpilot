@@ -1,4 +1,8 @@
-
-node_modules/
-.env
+# Editor and operating-system files
+.vscode/
 .DS_Store
+Thumbs.db
+
+# Dependencies and generated output
+node_modules/
+dist/

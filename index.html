@@ -1,38 +1,217 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StockPilot | Home</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <header>
-    <h1 class="logo">StockPilot</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="orders.html">Orders</a>
-      <a href="customers.html">Customers</a>
-      <a href="analytics.html">Analytics</a>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StockPilot | Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="index.html">
+          <img src="images/stockpilot-mark.svg" alt="" width="36" height="36" />
+          <span>StockPilot</span>
+        </a>
+        <p class="nav-label">WORKSPACE</p>
+        <nav class="side-nav" aria-label="Main navigation">
+          <a class="nav-link active" href="index.html"
+            ><span class="nav-icon">▦</span>Dashboard</a
+          >
+          <a class="nav-link" href="products.html"
+            ><span class="nav-icon">▤</span>Products</a
+          >
+          <a class="nav-link" href="orders.html"
+            ><span class="nav-icon">⇄</span>Orders</a
+          >
+          <a class="nav-link" href="customers.html"
+            ><span class="nav-icon">♙</span>Customers</a
+          >
+          <a class="nav-link" href="analytics.html"
+            ><span class="nav-icon">▥</span>Analytics</a
+          >
+        </nav>
+        <div class="sidebar-note">
+          <span class="note-dot"></span>
+          <div>
+            <strong>Inventory status</strong>
+            <p>Workspace is up to date</p>
+          </div>
+        </div>
+        <div class="sidebar-footer">StockPilot <span>•</span> Week 2</div>
+      </aside>
 
-  <main>
-    <h2>Inventory Dashboard</h2>
-    <p>Welcome to StockPilot, your inventory management solution.</p>
+      <main class="main-content">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">INVENTORY MANAGEMENT</p>
+            <h1>Dashboard</h1>
+          </div>
+          <div class="profile">
+            <div class="profile-avatar">SP</div>
+            <div><strong>Store Admin</strong><span>Administrator</span></div>
+          </div>
+        </header>
 
-    <section>
-      <h3>Manage Your Business</h3>
-      <p>Monitor products, track orders, organize customers, and review business performance in one place.</p>
-    </section>
-  </main>
+        <section class="welcome-panel">
+          <div>
+            <p class="eyebrow light">SUNDAY, OCTOBER 25, 2026</p>
+            <h2>Welcome back!</h2>
+            <p>Here’s what’s happening with your inventory today.</p>
+          </div>
+          <div class="welcome-mark">↗</div>
+        </section>
 
-  <footer>
-    <p>&copy; 2026 StockPilot. All rights reserved.</p>
-  </footer>
+        <section class="section-block" aria-labelledby="overview-heading">
+          <div class="section-heading">
+            <div>
+              <h2 id="overview-heading">Overview</h2>
+              <p>A quick look at your store's performance.</p>
+            </div>
+            <span class="period-chip">Current overview</span>
+          </div>
+          <div class="stats-grid">
+            <article class="stat-card">
+              <div class="stat-top">
+                <span>Total products</span><span class="stat-icon blue">▤</span>
+              </div>
+              <p class="stat-number">248</p>
+              <p class="stat-foot">
+                <span class="positive">+12</span> products this month
+              </p>
+            </article>
+            <article class="stat-card">
+              <div class="stat-top">
+                <span>Open orders</span><span class="stat-icon teal">⇄</span>
+              </div>
+              <p class="stat-number">36</p>
+              <p class="stat-foot">
+                <span class="positive">8 pending</span> dispatch
+              </p>
+            </article>
+            <article class="stat-card">
+              <div class="stat-top">
+                <span>Low stock items</span
+                ><span class="stat-icon amber">!</span>
+              </div>
+              <p class="stat-number">09</p>
+              <p class="stat-foot">
+                <span class="warning">Needs attention</span> review stock
+              </p>
+            </article>
+            <article class="stat-card">
+              <div class="stat-top">
+                <span>Total revenue</span
+                ><span class="stat-icon violet">$</span>
+              </div>
+              <p class="stat-number">$8,420</p>
+              <p class="stat-foot">
+                <span class="positive">+8.4%</span> from last month
+              </p>
+            </article>
+          </div>
+        </section>
 
-  <script src="js/script.js"></script>
-</body>
+        <section class="content-grid">
+          <article class="panel">
+            <div class="panel-heading">
+              <div>
+                <h2>Recent orders</h2>
+                <p>Latest activity from your store.</p>
+              </div>
+              <a class="text-link" href="orders.html">View all →</a>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Order</th>
+                    <th>Customer</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="strong">#SP-1048</td>
+                    <td>Olivia Martin</td>
+                    <td>Oct 25, 2026</td>
+                    <td><span class="status status-green">Delivered</span></td>
+                    <td class="strong">$240.00</td>
+                  </tr>
+                  <tr>
+                    <td class="strong">#SP-1047</td>
+                    <td>Noah Williams</td>
+                    <td>Oct 24, 2026</td>
+                    <td><span class="status status-blue">Processing</span></td>
+                    <td class="strong">$185.50</td>
+                  </tr>
+                  <tr>
+                    <td class="strong">#SP-1046</td>
+                    <td>Emma Davis</td>
+                    <td>Oct 24, 2026</td>
+                    <td><span class="status status-amber">Pending</span></td>
+                    <td class="strong">$92.00</td>
+                  </tr>
+                  <tr>
+                    <td class="strong">#SP-1045</td>
+                    <td>Liam Brown</td>
+                    <td>Oct 23, 2026</td>
+                    <td><span class="status status-green">Delivered</span></td>
+                    <td class="strong">$318.75</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+          <article class="panel stock-panel">
+            <div class="panel-heading">
+              <div>
+                <h2>Stock alerts</h2>
+                <p>Products running low.</p>
+              </div>
+              <a class="text-link" href="products.html">Manage →</a>
+            </div>
+            <div class="stock-item">
+              <div class="product-thumb thumb-blue">KB</div>
+              <div class="stock-info">
+                <strong>Wireless Keyboard</strong><span>SKU: KB-204</span>
+                <div class="stock-track"><span style="width: 22%"></span></div>
+              </div>
+              <div class="stock-count"><strong>4</strong><span>left</span></div>
+            </div>
+            <div class="stock-item">
+              <div class="product-thumb thumb-purple">HP</div>
+              <div class="stock-info">
+                <strong>Headphones Pro</strong><span>SKU: HP-118</span>
+                <div class="stock-track"><span style="width: 30%"></span></div>
+              </div>
+              <div class="stock-count"><strong>6</strong><span>left</span></div>
+            </div>
+            <div class="stock-item">
+              <div class="product-thumb thumb-orange">MS</div>
+              <div class="stock-info">
+                <strong>Wireless Mouse</strong><span>SKU: MS-072</span>
+                <div class="stock-track"><span style="width: 18%"></span></div>
+              </div>
+              <div class="stock-count"><strong>3</strong><span>left</span></div>
+            </div>
+          </article>
+        </section>
+
+        <footer class="page-footer">
+          <span>© 2026 StockPilot Inventory Management</span
+          ><span>Built for smarter stock management.</span>
+        </footer>
+      </main>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
 </html>

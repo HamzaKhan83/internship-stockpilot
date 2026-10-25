@@ -1,32 +1,175 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StockPilot | Orders</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <header>
-    <h1 class="logo">StockPilot</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="orders.html">Orders</a>
-      <a href="customers.html">Customers</a>
-      <a href="analytics.html">Analytics</a>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StockPilot | Orders</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="index.html"
+          ><img
+            src="images/stockpilot-mark.svg"
+            alt=""
+            width="36"
+            height="36"
+          /><span>StockPilot</span></a
+        >
+        <p class="nav-label">WORKSPACE</p>
+        <nav class="side-nav" aria-label="Main navigation">
+          <a class="nav-link" href="index.html"
+            ><span class="nav-icon">▦</span>Dashboard</a
+          >
+          <a class="nav-link" href="products.html"
+            ><span class="nav-icon">▤</span>Products</a
+          >
+          <a class="nav-link active" href="orders.html"
+            ><span class="nav-icon">⇄</span>Orders</a
+          >
+          <a class="nav-link" href="customers.html"
+            ><span class="nav-icon">♙</span>Customers</a
+          >
+          <a class="nav-link" href="analytics.html"
+            ><span class="nav-icon">▥</span>Analytics</a
+          >
+        </nav>
+        <div class="sidebar-note">
+          <span class="note-dot"></span>
+          <div>
+            <strong>Inventory status</strong>
+            <p>Workspace is up to date</p>
+          </div>
+        </div>
+        <div class="sidebar-footer">StockPilot <span>•</span> Week 2</div>
+      </aside>
+      <main class="main-content">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">INVENTORY MANAGEMENT</p>
+            <h1>Orders</h1>
+          </div>
+          <div class="profile">
+            <div class="profile-avatar">SP</div>
+            <div><strong>Store Admin</strong><span>Administrator</span></div>
+          </div>
+        </header>
 
-  <main>
-    <h2>Orders</h2>
-    <p>View and organize customer orders and their status.</p>
-  </main>
+        <section class="page-intro">
+          <div>
+            <h2>Orders</h2>
+            <p>Track orders and review their current status.</p>
+          </div>
+          <span class="period-chip">October 2026</span>
+        </section>
+        <section class="stats-grid compact-stats">
+          <article class="stat-card">
+            <div class="stat-top">
+              <span>Total orders</span><span class="stat-icon blue">⇄</span>
+            </div>
+            <p class="stat-number">184</p>
+            <p class="stat-foot">Orders recorded</p>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top">
+              <span>Processing</span><span class="stat-icon teal">↻</span>
+            </div>
+            <p class="stat-number">18</p>
+            <p class="stat-foot">Being prepared</p>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top">
+              <span>Pending</span><span class="stat-icon amber">…</span>
+            </div>
+            <p class="stat-number">08</p>
+            <p class="stat-foot">Awaiting confirmation</p>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top">
+              <span>Delivered</span><span class="stat-icon violet">✓</span>
+            </div>
+            <p class="stat-number">158</p>
+            <p class="stat-foot">Successfully completed</p>
+          </article>
+        </section>
+        <section class="panel table-panel">
+          <div class="panel-heading">
+            <div>
+              <h2>Recent orders</h2>
+              <p>Review order details and fulfilment progress.</p>
+            </div>
+            <span class="period-chip">5 recent orders</span>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Order ID</th>
+                  <th>Customer</th>
+                  <th>Order date</th>
+                  <th>Items</th>
+                  <th>Total</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="strong">#SP-1048</td>
+                  <td>Olivia Martin</td>
+                  <td>Oct 25, 2026</td>
+                  <td>3</td>
+                  <td class="strong">$240.00</td>
+                  <td><span class="status status-green">Delivered</span></td>
+                </tr>
+                <tr>
+                  <td class="strong">#SP-1047</td>
+                  <td>Noah Williams</td>
+                  <td>Oct 24, 2026</td>
+                  <td>2</td>
+                  <td class="strong">$185.50</td>
+                  <td><span class="status status-blue">Processing</span></td>
+                </tr>
+                <tr>
+                  <td class="strong">#SP-1046</td>
+                  <td>Emma Davis</td>
+                  <td>Oct 24, 2026</td>
+                  <td>1</td>
+                  <td class="strong">$92.00</td>
+                  <td><span class="status status-amber">Pending</span></td>
+                </tr>
+                <tr>
+                  <td class="strong">#SP-1045</td>
+                  <td>Liam Brown</td>
+                  <td>Oct 23, 2026</td>
+                  <td>4</td>
+                  <td class="strong">$318.75</td>
+                  <td><span class="status status-green">Delivered</span></td>
+                </tr>
+                <tr>
+                  <td class="strong">#SP-1044</td>
+                  <td>Ava Wilson</td>
+                  <td>Oct 22, 2026</td>
+                  <td>2</td>
+                  <td class="strong">$126.00</td>
+                  <td><span class="status status-red">Cancelled</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
 
-  <footer>
-    <p>&copy; 2026 StockPilot. All rights reserved.</p>
-  </footer>
-  <script src="js/script.js"></script>
-</body>
+        <footer class="page-footer">
+          <span>© 2026 StockPilot Inventory Management</span
+          ><span>Built for smarter stock management.</span>
+        </footer>
+      </main>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
 </html>
