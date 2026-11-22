@@ -2,8 +2,10 @@
 
 A simple, responsive inventory management website built for the Verstech Web Development Internship (Track 3).
 
-**Live site:** _add your Netlify/Vercel/GitHub Pages link here_
-**Live API:** _add your Render link here (optional)_
+**Live site:** https://hamzakhan83.github.io/internship-stockpilot/
+**Live API:** https://stockpilot-api-b6zq.onrender.com (health check: `/api/health`)
+
+> The API runs on a free Render plan, so the first request after a quiet period can take 30 to 60 seconds while it wakes up.
 
 ## Purpose
 Help small shops, offices and warehouses track products, spot low stock early and see the value of their inventory in one place.
@@ -31,8 +33,22 @@ Shop owners, office managers, school stores and small warehouse teams.
 - Form validation on the contact and product forms
 - Data saved in the browser (localStorage)
 
+## Screenshots
+
+### Home
+![Home page](images/home.png)
+
+### Inventory
+![Inventory page](images/inventory.png)
+
+### About
+![About page](images/about.png)
+
+### Contact
+![Contact page](images/contact.png)
+
 ## Technologies
-HTML5, CSS3 (Flexbox, Grid, variables, media queries), JavaScript (DOM, fetch, localStorage), Node.js + Express, Git/GitHub.
+HTML5, CSS3 (Flexbox, Grid, variables, media queries), JavaScript (DOM, fetch, localStorage), Node.js + Express, Git/GitHub, GitHub Pages (frontend), Render (backend).
 
 ## Run locally
 **Frontend:** open the project folder in VS Code, right-click `index.html` and choose **Open with Live Server**.
@@ -45,6 +61,11 @@ npm start
 ```
 The API runs on `http://localhost:3000`. Test it at `http://localhost:3000/api/health`.
 
+On localhost the contact form uses the local server. On the live site it uses the Render API automatically.
+
+## Testing
+See [TESTING.md](TESTING.md) for the testing report.
+
 ## Project structure
 ```
 stockpilot/
@@ -54,12 +75,14 @@ stockpilot/
 |-- contact.html
 |-- css/style.css
 |-- js/script.js
-|-- images/logo.svg
+|-- images/
+|   |-- logo.svg
+|   |-- (page screenshots)
 |-- server/
 |   |-- server.js
 |   |-- package.json
+|   |-- package-lock.json
 |-- TESTING.md
 |-- README.md
 |-- .gitignore
 ```
-
