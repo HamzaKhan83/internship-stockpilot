@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | StockPilot</title>
+  <meta name="description" content="Learn why StockPilot was built, who it is for and the technologies behind this inventory management project.">
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo"><img src="images/logo.svg" alt="" width="32" height="32">Stock<span>Pilot</span></a>
+    <div class="header-right">
+      <nav id="menu" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="inventory.html">Inventory</a>
+        <a href="about.html" class="active">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button id="theme-btn" class="icon-btn" aria-label="Toggle dark mode">🌙</button>
+      <button id="menu-btn" class="icon-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="menu">Menu</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-banner">
+      <div class="container">
+        <h1>About StockPilot</h1>
+        <p>A simple inventory system built during the Verstech Web Development Internship.</p>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Our purpose</h2>
+        <p class="section-sub">Small businesses often track stock in notebooks or scattered spreadsheets, which leads to missed reorders and lost sales. StockPilot gives them one clear place to see what they have, what is running low and what it is worth.</p>
+
+        <div class="cards">
+          <div class="card"><div class="emoji">🎯</div><h3>Purpose</h3><p>Help owners track products and avoid running out of stock.</p></div>
+          <div class="card"><div class="emoji">👥</div><h3>Target audience</h3><p>Shop owners, office managers, school stores and small warehouse teams.</p></div>
+          <div class="card"><div class="emoji">🚀</div><h3>Goal</h3><p>Make inventory control fast, visual and easy enough for anyone to use.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <h2 class="section-title">Technologies used</h2>
+        <p class="section-sub">Built from scratch with no front-end frameworks.</p>
+        <div class="cards">
+          <div class="card"><h3>HTML5</h3><p>Semantic structure with header, nav, main, section and footer.</p></div>
+          <div class="card"><h3>CSS3</h3><p>Flexbox, Grid, CSS variables, media queries and a dark mode theme.</p></div>
+          <div class="card"><h3>JavaScript</h3><p>DOM, localStorage, fetch API, form validation and CSV export.</p></div>
+          <div class="card"><h3>Public API</h3><p>The DummyJSON API provides the live supplier catalog on the home page.</p></div>
+          <div class="card"><h3>Node.js + Express</h3><p>A small backend receives and stores messages from the contact form.</p></div>
+          <div class="card"><h3>Git &amp; GitHub</h3><p>Version control for the source code, with deployment from the repository.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year">2026</span> StockPilot. All rights reserved.</p>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,217 +1,111 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>StockPilot | Dashboard</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <div class="app-shell">
-      <aside class="sidebar">
-        <a class="brand" href="index.html">
-          <img src="images/stockpilot-mark.svg" alt="" width="36" height="36" />
-          <span>StockPilot</span>
-        </a>
-        <p class="nav-label">WORKSPACE</p>
-        <nav class="side-nav" aria-label="Main navigation">
-          <a class="nav-link active" href="index.html"
-            ><span class="nav-icon">▦</span>Dashboard</a
-          >
-          <a class="nav-link" href="products.html"
-            ><span class="nav-icon">▤</span>Products</a
-          >
-          <a class="nav-link" href="orders.html"
-            ><span class="nav-icon">⇄</span>Orders</a
-          >
-          <a class="nav-link" href="customers.html"
-            ><span class="nav-icon">♙</span>Customers</a
-          >
-          <a class="nav-link" href="analytics.html"
-            ><span class="nav-icon">▥</span>Analytics</a
-          >
-        </nav>
-        <div class="sidebar-note">
-          <span class="note-dot"></span>
-          <div>
-            <strong>Inventory status</strong>
-            <p>Workspace is up to date</p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StockPilot | Inventory Management Made Simple</title>
+  <meta name="description" content="StockPilot is a simple inventory management system. Track products, watch low stock and know your stock value in one dashboard.">
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo"><img src="images/logo.svg" alt="" width="32" height="32">Stock<span>Pilot</span></a>
+    <div class="header-right">
+      <nav id="menu" aria-label="Main navigation">
+        <a href="index.html" class="active">Home</a>
+        <a href="inventory.html">Inventory</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button id="theme-btn" class="icon-btn" aria-label="Toggle dark mode">🌙</button>
+      <button id="menu-btn" class="icon-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="menu">Menu</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <h1>Know what you have. <span>Never run out.</span></h1>
+          <p>StockPilot helps small shops, offices and warehouses track products, spot low stock early and see the value of their inventory at a glance.</p>
+          <div class="hero-actions">
+            <a href="inventory.html" class="btn">Open Inventory</a>
+            <a href="#features" class="btn btn-outline">See Features</a>
           </div>
         </div>
-        <div class="sidebar-footer">StockPilot <span>•</span> Week 2</div>
-      </aside>
+        <div class="hero-card">
+          <h3>⚠ Reorder alerts</h3>
+          <div id="low-preview"></div>
+        </div>
+      </div>
+    </section>
 
-      <main class="main-content">
-        <header class="topbar">
-          <div>
-            <p class="eyebrow">INVENTORY MANAGEMENT</p>
-            <h1>Dashboard</h1>
-          </div>
-          <div class="profile">
-            <div class="profile-avatar">SP</div>
-            <div><strong>Store Admin</strong><span>Administrator</span></div>
-          </div>
-        </header>
-
-        <section class="welcome-panel">
-          <div>
-            <p class="eyebrow light">SUNDAY, OCTOBER 25, 2026</p>
-            <h2>Welcome back!</h2>
-            <p>Here’s what’s happening with your inventory today.</p>
-          </div>
-          <div class="welcome-mark">↗</div>
-        </section>
-
-        <section class="section-block" aria-labelledby="overview-heading">
-          <div class="section-heading">
-            <div>
-              <h2 id="overview-heading">Overview</h2>
-              <p>A quick look at your store's performance.</p>
-            </div>
-            <span class="period-chip">Current overview</span>
-          </div>
-          <div class="stats-grid">
-            <article class="stat-card">
-              <div class="stat-top">
-                <span>Total products</span><span class="stat-icon blue">▤</span>
-              </div>
-              <p class="stat-number">248</p>
-              <p class="stat-foot">
-                <span class="positive">+12</span> products this month
-              </p>
-            </article>
-            <article class="stat-card">
-              <div class="stat-top">
-                <span>Open orders</span><span class="stat-icon teal">⇄</span>
-              </div>
-              <p class="stat-number">36</p>
-              <p class="stat-foot">
-                <span class="positive">8 pending</span> dispatch
-              </p>
-            </article>
-            <article class="stat-card">
-              <div class="stat-top">
-                <span>Low stock items</span
-                ><span class="stat-icon amber">!</span>
-              </div>
-              <p class="stat-number">09</p>
-              <p class="stat-foot">
-                <span class="warning">Needs attention</span> review stock
-              </p>
-            </article>
-            <article class="stat-card">
-              <div class="stat-top">
-                <span>Total revenue</span
-                ><span class="stat-icon violet">$</span>
-              </div>
-              <p class="stat-number">$8,420</p>
-              <p class="stat-foot">
-                <span class="positive">+8.4%</span> from last month
-              </p>
-            </article>
-          </div>
-        </section>
-
-        <section class="content-grid">
-          <article class="panel">
-            <div class="panel-heading">
-              <div>
-                <h2>Recent orders</h2>
-                <p>Latest activity from your store.</p>
-              </div>
-              <a class="text-link" href="orders.html">View all →</a>
-            </div>
-            <div class="table-wrap">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Order</th>
-                    <th>Customer</th>
-                    <th>Date</th>
-                    <th>Status</th>
-                    <th>Total</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="strong">#SP-1048</td>
-                    <td>Olivia Martin</td>
-                    <td>Oct 25, 2026</td>
-                    <td><span class="status status-green">Delivered</span></td>
-                    <td class="strong">$240.00</td>
-                  </tr>
-                  <tr>
-                    <td class="strong">#SP-1047</td>
-                    <td>Noah Williams</td>
-                    <td>Oct 24, 2026</td>
-                    <td><span class="status status-blue">Processing</span></td>
-                    <td class="strong">$185.50</td>
-                  </tr>
-                  <tr>
-                    <td class="strong">#SP-1046</td>
-                    <td>Emma Davis</td>
-                    <td>Oct 24, 2026</td>
-                    <td><span class="status status-amber">Pending</span></td>
-                    <td class="strong">$92.00</td>
-                  </tr>
-                  <tr>
-                    <td class="strong">#SP-1045</td>
-                    <td>Liam Brown</td>
-                    <td>Oct 23, 2026</td>
-                    <td><span class="status status-green">Delivered</span></td>
-                    <td class="strong">$318.75</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </article>
-
-          <article class="panel stock-panel">
-            <div class="panel-heading">
-              <div>
-                <h2>Stock alerts</h2>
-                <p>Products running low.</p>
-              </div>
-              <a class="text-link" href="products.html">Manage →</a>
-            </div>
-            <div class="stock-item">
-              <div class="product-thumb thumb-blue">KB</div>
-              <div class="stock-info">
-                <strong>Wireless Keyboard</strong><span>SKU: KB-204</span>
-                <div class="stock-track"><span style="width: 22%"></span></div>
-              </div>
-              <div class="stock-count"><strong>4</strong><span>left</span></div>
-            </div>
-            <div class="stock-item">
-              <div class="product-thumb thumb-purple">HP</div>
-              <div class="stock-info">
-                <strong>Headphones Pro</strong><span>SKU: HP-118</span>
-                <div class="stock-track"><span style="width: 30%"></span></div>
-              </div>
-              <div class="stock-count"><strong>6</strong><span>left</span></div>
-            </div>
-            <div class="stock-item">
-              <div class="product-thumb thumb-orange">MS</div>
-              <div class="stock-info">
-                <strong>Wireless Mouse</strong><span>SKU: MS-072</span>
-                <div class="stock-track"><span style="width: 18%"></span></div>
-              </div>
-              <div class="stock-count"><strong>3</strong><span>left</span></div>
-            </div>
-          </article>
-        </section>
-
-        <footer class="page-footer">
-          <span>© 2026 StockPilot Inventory Management</span
-          ><span>Built for smarter stock management.</span>
-        </footer>
-      </main>
+    <div class="container">
+      <div class="stats">
+        <div class="card stat"><div class="num" id="stat-products">0</div><div class="label">Products</div></div>
+        <div class="card stat"><div class="num" id="stat-units">0</div><div class="label">Units in stock</div></div>
+        <div class="card stat"><div class="num" id="stat-low">0</div><div class="label">Need reordering</div></div>
+        <div class="card stat"><div class="num" id="stat-value">$0.00</div><div class="label">Stock value</div></div>
+      </div>
     </div>
-    <script src="js/script.js"></script>
-  </body>
+
+    <section class="section" id="features">
+      <div class="container">
+        <h2 class="section-title">Everything you need to stay in control</h2>
+        <p class="section-sub">Simple tools that replace messy spreadsheets.</p>
+        <div class="cards">
+          <div class="card"><div class="emoji">📦</div><h3>Product tracking</h3><p>Add, edit and remove products with SKU, category, quantity and price.</p></div>
+          <div class="card"><div class="emoji">🔔</div><h3>Low stock alerts</h3><p>Set a reorder level for each item and see warnings the moment stock runs low.</p></div>
+          <div class="card"><div class="emoji">💰</div><h3>Stock valuation</h3><p>Automatic totals show how much money is sitting on your shelves.</p></div>
+          <div class="card"><div class="emoji">🔍</div><h3>Search &amp; filter</h3><p>Find any product by name or SKU, then filter by category or stock status.</p></div>
+          <div class="card"><div class="emoji">📤</div><h3>CSV export</h3><p>Download your inventory as a CSV file for Excel, accounting or sharing.</p></div>
+          <div class="card"><div class="emoji">📱</div><h3>Works everywhere</h3><p>Fully responsive: use it on a phone at the warehouse or a desktop at the office.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="catalog-section" style="padding-top:0">
+      <div class="container">
+        <h2 class="section-title">Supplier catalog (live API)</h2>
+        <p class="section-sub">Products loaded live from a public API. Click "Add to my stock" to put one into your inventory.</p>
+        <p id="catalog-status" class="section-sub" role="status">Loading products...</p>
+        <div class="cards" id="catalog"></div>
+      </div>
+    </section>
+
+    <section class="section" id="faq" style="padding-top:0">
+      <div class="container">
+        <h2 class="section-title">Frequently asked questions</h2>
+        <p class="section-sub">Quick answers about StockPilot.</p>
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-btn" aria-expanded="false">Where is my inventory data stored?</button>
+            <div class="accordion-panel">In this demo version your data is saved privately in your own browser (localStorage). It never leaves your device, and it stays after you close the tab.</div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-btn" aria-expanded="false">How does the low stock alert work?</button>
+            <div class="accordion-panel">Each product has a reorder level. When the quantity drops to that level or below, the product is marked "Low stock". At zero it is marked "Out of stock".</div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-btn" aria-expanded="false">Can I export my data?</button>
+            <div class="accordion-panel">Yes. Open the Inventory page and click "Export CSV" to download all products as a spreadsheet-friendly file.</div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-btn" aria-expanded="false">Can I reset the demo data?</button>
+            <div class="accordion-panel">Yes. On the Inventory page click "Reset demo data" to restore the sample products.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year">2026</span> StockPilot. All rights reserved.</p>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
 </html>

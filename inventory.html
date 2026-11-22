@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory Manager | StockPilot</title>
+  <meta name="description" content="Add, edit, search and export your products. Track quantities, prices and low stock alerts in the StockPilot inventory manager.">
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo"><img src="images/logo.svg" alt="" width="32" height="32">Stock<span>Pilot</span></a>
+    <div class="header-right">
+      <nav id="menu" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="inventory.html" class="active">Inventory</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button id="theme-btn" class="icon-btn" aria-label="Toggle dark mode">🌙</button>
+      <button id="menu-btn" class="icon-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="menu">Menu</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-banner">
+      <div class="container">
+        <h1>Inventory Manager</h1>
+        <p id="summary">Loading...</p>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <div class="toolbar">
+          <input id="search" class="grow" type="search" placeholder="Search by name or SKU..." aria-label="Search products">
+          <select id="filter-category" aria-label="Filter by category"></select>
+          <select id="filter-status" aria-label="Filter by stock status">
+            <option value="">All statuses</option>
+            <option value="in">In stock</option>
+            <option value="low">Low stock</option>
+            <option value="out">Out of stock</option>
+          </select>
+          <button id="add-btn" class="btn">+ Add product</button>
+          <button id="export-btn" class="btn btn-outline">Export CSV</button>
+          <button id="reset-btn" class="btn btn-outline">Reset demo data</button>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Product</th><th>SKU</th><th>Category</th><th>Qty</th>
+                <th>Price</th><th>Value</th><th>Status</th><th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="item-table-body"></tbody>
+          </table>
+          <div id="empty-state" class="empty">No products match your search.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Add / Edit modal -->
+  <div id="modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal">
+      <h3 id="modal-title">Add product</h3>
+      <form id="item-form" novalidate>
+        <input type="hidden" name="id">
+        <div class="form-group">
+          <label for="f-name">Product name</label>
+          <input id="f-name" name="name" type="text" maxlength="80" required>
+          <div class="error" id="err-name"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="f-sku">SKU</label>
+            <input id="f-sku" name="sku" type="text" maxlength="30" required>
+            <div class="error" id="err-sku"></div>
+          </div>
+          <div class="form-group">
+            <label for="f-category">Category</label>
+            <input id="f-category" name="category" type="text" maxlength="40" placeholder="e.g. Electronics">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="f-qty">Quantity</label>
+            <input id="f-qty" name="qty" type="number" min="0" step="1" required>
+            <div class="error" id="err-qty"></div>
+          </div>
+          <div class="form-group">
+            <label for="f-price">Price ($)</label>
+            <input id="f-price" name="price" type="number" min="0" step="0.01" required>
+            <div class="error" id="err-price"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="f-min">Reorder level (low stock at or below)</label>
+          <input id="f-min" name="min" type="number" min="0" step="1" required>
+          <div class="error" id="err-min"></div>
+        </div>
+        <div class="modal-actions">
+          <button type="button" id="cancel-btn" class="btn btn-outline">Cancel</button>
+          <button type="submit" class="btn">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; <span id="year">2026</span> StockPilot. All rights reserved.</p>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>

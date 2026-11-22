@@ -1,31 +1,72 @@
-# StockPilot — Week 2 Submission
+# StockPilot
 
-StockPilot is a front-end inventory and order management website prototype created for Week 2 of the Web Development Internship.
+A simple, responsive inventory management website built for the Verstech Web Development Internship (Track 3).
 
-## Project purpose
-The website presents sample inventory, order, customer, and sales information in a consistent dashboard-style interface.
+**Live site:** _add your Netlify/Vercel/GitHub Pages link here_
+**Live API:** _add your Render link here (optional)_
+
+## Purpose
+Help small shops, offices and warehouses track products, spot low stock early and see the value of their inventory in one place.
+
+## Target audience
+Shop owners, office managers, school stores and small warehouse teams.
 
 ## Pages
-- `index.html` — Dashboard overview, order activity, and stock alerts
-- `products.html` — Product inventory and stock statuses
-- `orders.html` — Order summaries and recent order records
-- `customers.html` — Customer overview and sample directory
-- `analytics.html` — Revenue overview and category breakdown
+| Page | File | What it does |
+|------|------|--------------|
+| Home | `index.html` | Hero, live stats, features, live product catalog (API), FAQ |
+| Inventory | `inventory.html` | Add / edit / delete products, search, filter, export CSV |
+| About | `about.html` | Purpose, audience and technologies |
+| Contact | `contact.html` | Validated contact form connected to the Node.js backend |
+
+## Features
+- Add, edit, delete products and adjust quantity with +1 / −1 buttons
+- Low stock and out-of-stock badges based on each product's reorder level
+- Search by name or SKU, filter by category and status
+- Automatic stock value and totals
+- Export inventory to CSV
+- Live product catalog from the DummyJSON public API (add items to your stock)
+- Responsive layout with hamburger menu
+- Dark mode toggle, FAQ accordion, modal form
+- Form validation on the contact and product forms
+- Data saved in the browser (localStorage)
 
 ## Technologies
-- HTML5 with semantic page structure
-- CSS3 with shared styling, Flexbox, Grid, variables, hover states, and media queries
-- A small JavaScript file to keep the active navigation link consistent
-- SVG logo asset in the `images` folder
+HTML5, CSS3 (Flexbox, Grid, variables, media queries), JavaScript (DOM, fetch, localStorage), Node.js + Express, Git/GitHub.
 
 ## Run locally
-1. Open this folder in Visual Studio Code.
-2. Install the Live Server extension if needed.
-3. Right-click `index.html`.
-4. Select **Open with Live Server**.
+**Frontend:** open the project folder in VS Code, right-click `index.html` and choose **Open with Live Server**.
 
-## Notes
-This is a static front-end prototype. The displayed records and figures are sample content; there is no database, authentication, or real order processing yet.
+**Backend (contact form):**
+```bash
+cd server
+npm install
+npm start
+```
+The API runs on `http://localhost:3000`. Test it at `http://localhost:3000/api/health`.
 
-## Week 2 focus
-Complete multi-page HTML and CSS design, semantic elements, consistent styling, and local image assets.
+## Project structure
+```
+stockpilot/
+|-- index.html
+|-- inventory.html
+|-- about.html
+|-- contact.html
+|-- css/style.css
+|-- js/script.js
+|-- images/logo.svg
+|-- server/
+|   |-- server.js
+|   |-- package.json
+|-- TESTING.md
+|-- README.md
+|-- .gitignore
+```
+
+## Deployment
+- Frontend: Netlify / Vercel / GitHub Pages (publish the repository root, no build command).
+- Backend: Render, root directory `server`, build command `npm install`, start command `npm start`.
+  After deploying, update `contactEndpoint` at the top of `js/script.js` to your live Render URL.
+
+## Screenshots
+_Add screenshots of the Home, Inventory and Contact pages here._

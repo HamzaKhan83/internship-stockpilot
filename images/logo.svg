@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="StockPilot logo">
+  <rect width="64" height="64" rx="14" fill="#0fa3b1"/>
+  <path d="M32 11 L52 22 L32 33 L12 22 Z" fill="#ffffff"/>
+  <path d="M12 28 L32 39 L52 28 L52 38 L32 49 L12 38 Z" fill="#0b1f3a" opacity="0.85"/>
+  <path d="M12 42 L32 53 L52 42" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
