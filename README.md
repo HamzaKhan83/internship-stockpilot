@@ -63,10 +63,3 @@ stockpilot/
 |-- .gitignore
 ```
 
-## Deployment
-- Frontend: Netlify / Vercel / GitHub Pages (publish the repository root, no build command).
-- Backend: Render, root directory `server`, build command `npm install`, start command `npm start`.
-  After deploying, update `contactEndpoint` at the top of `js/script.js` to your live Render URL.
-
-## Screenshots
-_Add screenshots of the Home, Inventory and Contact pages here._
