@@ -8,7 +8,10 @@
 const CONFIG = {
   // After deploying the backend on Render, replace this with your live URL, e.g.
   // "https://stockpilot-api.onrender.com/api/contact"
-  contactEndpoint: "http://localhost:3000/api/contact",
+  contactEndpoint:
+  location.hostname === "localhost" || location.hostname === "127.0.0.1"
+    ? "http://localhost:3000/api/contact"
+    : "https://stockpilot-api-b6zq.onrender.com/api/contact",
   catalogUrl:
     "https://dummyjson.com/products?limit=6&select=title,price,category,stock,sku,thumbnail",
 };
